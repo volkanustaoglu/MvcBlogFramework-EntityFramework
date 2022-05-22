@@ -1,0 +1,158 @@
+﻿@model IEnumerable<BlogMvcApp.Models.BlogModel>
+@{
+
+    ViewBag.Title = "S. Gürkan Ustaoğlu - Online Terapi ve Psikolojik Danışmanlık";
+    ViewBag.MetaDescription = "Psikolojik Danışman S. Gürkan Ustaoğlu'nun ergen ve yetişkinlere bireysel psikolojik danışmanlık hizmeti verdiği, online terapilerin gerçekleştirdiği ve psikoloji hakkında bloglarının yer aldığı kişisel web sitesidir.";
+    ViewBag.Image = "~/gurkantema/img/gurkanphoto2.png";
+    ViewBag.WhatsAppImage = "~/gurkantema/img/gurkanphoto2.png";
+
+
+
+}
+
+<section class="header">
+    <div class="container-fluid">
+        <div class="row w3-display-container">
+
+            <div class="col p-0"><img src="~/gurkantema/img/slider1.png" class="img-fluid"></div>
+
+
+            <div class="w3-display-middle psk-slide">YENİ BİR HAYAT İÇİN İLK ADIM </br>HER KONUDA DANIŞABİLİRSİN </br><button onclick="window.location.href = '/Home/Iletisim';" type="submit" class="btn turuncu_btn hazirsan-baslayalim">HAZIRSAN BAŞLAYALIM</button></div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 p-6 text-justify">
+            <p class="psk-merhaba pl-3">Merhaba,</p>
+            <p class="psk-merhaba-yazi pl-3">Psikolojik Danışmanlık ve Psikoterapi sürecine hoş geldin. Eğer kendi başına çözmekte zorlandığın sıkışmış, umutsuz, kaygılı, yorgun hissettiğin oluyorsa ve hatta çaresiz hissediyorsan destek alabilmek için şuan burada olmak doğru adımları attığını gösterir.</p>
+            <p class="neden-buradasin pl-4">Neden Buradasın?</p>
+            <div class="pt-4 pl-4">
+                <p class="psk-neden"><img src="~/gurkantema/img/elips.svg" class="pr-2"> Bilişsel Davranışcı Terapiler</p>
+                <p class="psk-neden"><img src="~/gurkantema/img/elips.svg" class="pr-2"> Depresyon</p>
+                <p class="psk-neden"><img src="~/gurkantema/img/elips.svg" class="pr-2"> Kaygı Bozuklukları</p>
+                <p class="psk-neden"><img src="~/gurkantema/img/elips.svg" class="pr-2"> Panik Atak</p>
+                <p class="psk-neden"><img src="~/gurkantema/img/elips.svg" class="pr-2"> Obsesif Kompulsif Bozukluğu</p>
+            </div>
+
+            <div class="py-4 pl-4"><button onclick="window.location.href = '/Home/CalismaAlanlarim';" type="submit" class="btn yesil_btn hazirsan-baslayalim">DEVAMINI GÖR ></button></div>
+
+
+        </div>
+        <div class="col-md-6 p-0"><img src="~/gurkantema/img/gurkanphoto2.png" class="img-fluid"></div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 p-0">
+            <div class="w3-display-container">
+                <img src="~/gurkantema/img/gri.png" class="img-fluid" alt="First slide">
+                <div class="w3-display-topleft yardima-mi">
+                    Yardıma mı</br>İhtiyacınız var?
+                </div>
+                <div class="w3-display-topleft ister-ofisime text-justify">
+                    İster ofisime gelerek ister gelmeden danışmanlık
+                    </br>hizmeti alan danışanlarımız arasına katılabilirsin.
+                </div>
+
+
+                <div class="w3-display-right px-3">
+                    <a href="https://www.instagram.com/gurkannusta/" target="_blank"><img src="~/gurkantema/img/instagram.svg" class="img-fluid sosyal-medya w3-hover-opacity" alt="First slide"></a>
+                    <a href="https://www.linkedin.com/in/samet-g%C3%BCrkan-ustao%C4%9Flu-0510651b0/" target="_blank"><img src="~/gurkantema/img/twitter.svg" class="img-fluid sosyal-medya w3-hover-opacity" alt="First slide"></a>
+                    <a href="#"><img src="~/gurkantema/img/youtube.svg" class="img-fluid sosyal-medya w3-hover-opacity" alt="First slide"></a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-md-6 p-0">
+            <div class="w3-display-container">
+                <img src="~/gurkantema/img/yesil.png" class="img-fluid" alt="First slide">
+                <div class="w3-display-left w3-container kararsiz-misin">
+                    Kararsız mısın?
+                </div>
+                <div class="w3-display-left w3-container en-soru">
+                    En Sık Sorulan Sorular
+                </div>
+                <div class="w3-display-left w3-container en-soru-yazi text-justify">
+                    Lütfen, bireysel psikolojik danışmanlık ile ilgili en sık sorulan
+                    soruları ve cavapları inceleyin.
+                </div>
+
+
+                <div class="w3-display-right px-3"><a href="/Home/SSS"><img src="~/gurkantema/img/btn-sikca.svg" class="img-fluid sosyal-medya w3-hover-opacity" alt="First slide"></a></div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@Html.Partial("_BlogListesi")
+
+
+<div class="container-fluid">
+    <div class="row w3-display-container">
+
+        <div class="col p-0"><img src="~/gurkantema/img/gurkanphoto.png" class="img-fluid"></div>
+
+        <div class="row">
+            <div class="w3-display-left w3-container onlar-basardi pl-4">Onlar Başardı, Sıra Sende!</div>
+            <div class="w3-display-left w3-container onlar-basardi-yazi text-justify pl-4">
+                Artık bir durumu değiştirme imkanımız olmadığı zaman, kendimizi değiştirmek zorundayız.
+                <br />“Viktor Frankl”
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 p-0 hidden-phone"><img src="~/gurkantema/img/bilgisayarli.png" class="img-fluid"></div>
+        <div class="col-md-6 p-6 text-justify">
+            <p class="bana-ulasin px-4">Şimdi Bana Ulaşın</p>
+            <p class="bana-ulasin-yazi pl-4">“Kendiniz veya önem verdiğiniz biri yaşamında zorlanıyorsa yardım etmem için bana ulaşabilirsiniz.”</p>
+
+
+
+            <div class="yeni-bir-stil">
+                <div class="row pt-3 pl-3">
+                    <div class="col-2"><img src="~/gurkantema/img/btn-map.svg" class="img-fluid" style="float:right;"></div>
+                    <div class="col-8 pt-2"><p><span class="bana-ulasin-iletisim text-justify"> Sahrayı Cedit Mah. Atatürk Cad. No:27/A </br>Kadıköy/İSTANBUL</span></p></div>
+                </div>
+                <div class="row pt-3 pl-3">
+                    <div class="col-2"><img src="~/gurkantema/img/btn-mail.svg" class="img-fluid" style="float:right;"></div>
+                    <div class="col-8 pt-2"><p><span class="pl-2 bana-ulasin-iletisim"><a href="mailto:info@gurkanustaoglu.com"> info@gurkanustaoglu.com</a></span></p></div>
+                </div>
+                <div class="row py-4 pl-3">
+                    <div class="col-2"><img src="~/gurkantema/img/btn-tel.svg" class="img-fluid" style="float:right;"></div>
+                    <div class="col-8 pt-2"><p><span class="pl-2 bana-ulasin-iletisim"><a href="tel://+905379862633">+90 (537) 986 26 33</a></span></p></div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

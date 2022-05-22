@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BlogMvcApp.Models.BlogModel>
+
+
+
+    <div class="container-fluid">
+
+        <div class="container">
+            <div class="bloglarim-yazi text-center">
+                <a href="/Blog/List" class="bloglarim-tiklama">Blog Yazılarım</a>
+            </div>
+            <div class="bloglarim-alt text-center p-5">
+                Kendi istediklerimi, kendi istediğim şekilde yazdığım bloglarımı okumak için takip edebilirsin.
+            </div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner row w-100 mx-auto">
+                    <div class="carousel-item col-md-4 active">
+                        <div class="card border border-light">
+                            <img class="img-fluid blog-img" src="~/gurkantheme/img/blog-1-1.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="blog-baslik">Kendin ve İlişkin</p>
+                                <p class="blog-ekleme-tarih">4.06.2020 04:04:28</p>
+                                <p class="blog-aciklama text-justify">“İnsan kendisiyle nasıl bir ilişki kuruyorsa bir başkasıyla da ilişkisini öyle kurar.” Her şey burada başlıyor aslında. Hatalar…</p>
+                                <a href="/Blog/Details/1" style="text-decoration:none"> <p class="blog-devam">DEVAMINI OKU<img src="~/gurkantema/img/blog-devam.svg"></p></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="carousel-item col-md-4">
+                            <div class="card border border-light">
+                                <img class="img-fluid blog-img" src="~/Upload/@Html.Raw("Resim"+ @item.Resim)" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="blog-baslik">@item.Baslik</p>
+                                    <p class="blog-ekleme-tarih">@item.EklenmeTarihi</p>
+                                    <p class="blog-aciklama text-justify">@item.Aciklama</p>
+                                    <a style="text-decoration:none" href="@Url.RouteUrl("BlogDetay", new { @controller="Blog", @action="Details", @Id = item.Id, @title = item.Baslik.ToLower()
+                                                .Replace(' ','-').Replace('ğ','g').Replace("ş", "s").Replace("ı", "i").Replace("ö", "o").Replace("ü", "u").Replace("ç", "c").Replace("---", "-").Replace("--", "-").Replace("?", "").Replace("/", "").Replace(".", "")
+.Replace("'", "-").Replace("#", "-").Replace("%", "-").Replace("&", "-").Replace("*", "-")
+.Replace("!", "-").Replace(",", "-").Replace("@", "-").Replace("+", "-")
+.Replace(";", "-").Replace(":", "-")
+                                            })">
+                                        <p class="blog-devam">DEVAMINI OKU<img src="~/gurkantema/img/blog-devam.svg"></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <a class="carousel-control-prev btn-blog-prev" href="#myCarousel" role="button" data-slide="prev">
+                    </span><img src="~/gurkantema/img/psk-geri.svg">
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next btn-blog-next" href="#myCarousel" role="button" data-slide="next">
+                    </span><img src="~/gurkantema/img/psk-ileri.svg">
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,77 @@
+﻿
+
+@{
+    ViewBag.Title = "Blog";
+    ViewBag.MetaDescription = "Açıklama Blog";
+    ViewBag.Image= 
+}
+
+
+
+
+
+<div class="container-fluid yesil">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pt-4"><p class="title-hak">Blog.</p></div>
+        </div>
+        <div class="col-md-12">
+            <div class="pb-4"><p class="title-hak-yazi">Anasayfa / Blog</p></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="row pt-5 calisma-alanlari-genislik">
+        <div class="col-md-8">
+            <div class="container-fluid">
+                <div class="row calisma-alanlari-genislik ">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card border border-light">
+                            <img class="img-fluid blog-img" src="img/blog-1-1.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="blog-baslik">Kendin ve İlişkin</p>
+                                <p class="blog-ekleme-tarih">4.06.2020 04:04:28</p>
+                                <p class="blog-aciklama text-justify">“İnsan kendisiyle nasıl bir ilişki kuruyorsa bir başkasıyla da ilişkisini öyle kurar.” Her şey burada başlıyor aslında. Hatalar…</p>
+                                <a href="blog-detay.html" style="text-decoration:none"> <p class="blog-devam">DEVAMINI OKU<img src="img/blog-devam.png"></p></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card border border-light">
+                            <img class="img-fluid blog-img" src="img/blog-2-2.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="blog-baslik">Kendin ve İlişkin</p>
+                                <p class="blog-ekleme-tarih">4.06.2020 04:04:28</p>
+                                <p class="blog-aciklama text-justify">“İnsan kendisiyle nasıl bir ilişki kuruyorsa bir başkasıyla da ilişkisini öyle kurar.” Her şey burada başlıyor aslında. Hatalar…</p>
+                                <a href="blog-detay.html" style="text-decoration:none"> <p class="blog-devam">DEVAMINI OKU<img src="img/blog-devam.png"></p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card border border-light">
+                            <img class="img-fluid blog-img" src="img/blog-3-3.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="blog-baslik">Kendin ve İlişkin</p>
+                                <p class="blog-ekleme-tarih">4.06.2020 04:04:28</p>
+                                <p class="blog-aciklama text-justify">“İnsan kendisiyle nasıl bir ilişki kuruyorsa bir başkasıyla da ilişkisini öyle kurar.” Her şey burada başlıyor aslında. Hatalar…</p>
+                                <a href="blog-detay.html" style="text-decoration:none"> <p class="blog-devam">DEVAMINI OKU<img src="img/blog-devam.png"></p></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+
+
+            @{Html.RenderAction("_KategoriListesi", "Category");}
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿
+@using (Html.BeginForm("List", "Blog",FormMethod.Get))
+{
+
+    <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        @Html.TextBox("q",null, new { @class = "form-control" })
+        <button class="btn btn-primary" type="submit">Ara</button>
+    </div>
+
+}
+

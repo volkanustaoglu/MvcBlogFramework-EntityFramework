@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "İletişim - Psikolojik Danışman S. Gürkan Ustaoğlu";
+    ViewBag.MetaDescription = "S. Gürkan Ustaoğlu - İletişim Bilgileri; Tel: +90 (537) 986 26 33, E-mail: info@gurkanustaoglu.com";
+}
+
+<div class="container-fluid yesil">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pt-4"><p class="title-hak">İletişim</p></div>
+        </div>
+        <div class="col-md-12">
+            <div class="pb-4"><p class="title-hak-yazi">Anasayfa / İletişim</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid calisma-alanlari-genislik">
+    <div class="row">
+        <div class="col-md-3 randevu-formu">
+            RANDEVU FORMU
+        </div>
+    </div>
+    <div class="row py-3">
+
+       
+        
+        
+        <div class="col-md-7">
+            @if (ViewData["result"] != null)
+            {
+                if (ViewData["result"].ToString() == "True")
+                {
+                    <div class="alert alert-success">Mesajınız Başarıyla Gönderilmiştir.</div>
+                }
+                else {
+
+        <div class="alert alert-danger">Mesajınız Gönderilemedi! Tekrar Deneyiniz.</div>
+                }
+            }
+
+            
+
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control randevu-formu-yazi" id="adsoyad" name="adsoyad" placeholder="Adınız /Soyadınız">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="email" class="form-control randevu-formu-yazi" id="email" name="email" placeholder="E-Posta Adresiniz">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control randevu-formu-yazi" id="telefon" name="telefon" placeholder="Telefon Numaranız">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control randevu-formu-yazi" id="konu" name="konu" placeholder="Konu">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control randevu-formu-yazi" id="mesaj" name="mesaj" rows="6" placeholder="Mesajınız..."></textarea>
+                </div>
+
+                <button type="submit" class="btn yesil_btn " style="color: white; padding: 10px 50px 10px 50px; font-family: Poppins Bold">GÖNDER</button>
+            }
+            </br>
+            </br>
+
+
+
+        </div>
+        <div class="col-md-5">
+            <div class="container-fluid">
+                <div class="row  iletisim-gri">
+
+                    <div class="col-12 pl-5 pt-5 iletisim-adres">Adres</div>
+
+                    <div class="pl-5 pt-5">
+                        <div class="row">
+                            <div class="col-2"><img src="~/gurkantema/img/iletisim-map.svg" class="img-fluid"></div>
+                            <div class="col-10"><p><span class="iletisim-ulasin text-justify"> Sahrayı Cedit Mah. Atatürk Cad. No:27/A </br>Kadıköy/İSTANBUL</span></p></div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-2"><img src="~/gurkantema/img/iletisim-mail.svg" class="img-fluid"></div>
+                            <div class="col-10"><p><span class="iletisim-ulasin text-justify"><a href="mailto:info@gurkanustaoglu.com"> info@gurkanustaoglu.com</a></span></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 pt-2"><img src="~/gurkantema/img/iletisim-tel.svg" class="img-fluid"></div>
+                            <div class="col-10"><p><span class="iletisim-ulasin"><a href="tel://+905379862633">+90 (537) 986 26 33</a></span></p></div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 px-5 pt-3  iletisim-adres">Çalışma Saatleri</div>
+                    <div class="col-12  pl-5 pt-2 pb-5 iletisim-ulasin">09:00 - 19:00</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

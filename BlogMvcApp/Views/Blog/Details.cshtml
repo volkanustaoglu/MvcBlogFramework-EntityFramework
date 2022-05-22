@@ -1,0 +1,48 @@
+﻿@model BlogMvcApp.Models.Blog
+
+@{
+    ViewBag.Title ="S. Gürkan Ustaoğlu - " + Model.Baslik;
+    ViewBag.MetaDescription = Model.Aciklama;
+    ViewBag.Image = "~/Upload/" + @Html.Raw("Resim" + @Model.Resim);
+    ViewBag.WhatsAppImage = "~/Upload/" + @Html.Raw("Resim" + @Model.Resim);
+}
+    
+
+<div class="container-fluid yesil">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pt-4"><p class="title-hak">Blog. Detay</p></div>
+        </div>
+        <div class="col-md-12">
+            <div class="pb-4"><p class="title-hak-yazi">Anasayfa / Blog</p></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="row pt-5 calisma-alanlari-genislik">
+        <div class="col-md-8 pb-5">
+            <img src="~/Upload/@Html.Raw("Resim"+ @Model.Resim)" class="img-fluid">
+            <p class="biyografi pt-3">@Model.Baslik</p>
+            <span class="glyphicon glyphicon-time"></span><p class="blog-ekleme-tarih">@Model.EklenmeTarihi</p>
+            <blockquote class="blockquote">
+                <p style="font-family:Poppins Medium">@Model.Aciklama</p>
+            </blockquote>
+            <div class="biyografi-yazi text-justify pt-3" style="font-family:Poppins Medium">
+                 @Html.Raw(Model.Icerik) 
+            </div>
+            
+            
+        </div>
+        <div class="col-md-4" style="font-family: Poppins Bold">
+            <p class="blog-detay"> Tüm Kategoriler</p>
+            <p class="copyright"></p>
+
+            @{Html.RenderAction("_KategoriListesi", "Category");}
+
+
+        </div>
+    </div>
+</div>
